@@ -4,7 +4,8 @@
   "description": "A simple clone of a todo web app like Wunderlist.com",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "Brandon C",
   "license": "ISC",
