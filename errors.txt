@@ -1,1 +1,3 @@
 - missing script seed.js when try to run npm run seed.js
+
+- body is currently being blocked by nabber even though i added padding to the top of it
