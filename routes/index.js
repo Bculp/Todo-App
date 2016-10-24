@@ -7,9 +7,15 @@ module.exports = router;
 
 //route for all notes
 router.get('/', function(req, res, next) {
-	Todos.findAll()
-	.then(arrOfTodos => res.send(arrOfTodos))
-	.catch(next)
+	
+	//**Renders just the data from db without formatting or using html**//
+
+	// Todos.findAll()
+	// .then(arrOfTodos => res.send(arrOfTodos))
+	// .catch(next)
+
+	//**Renders just the html file, nothing else **//
+	res.render('index');
 })
 
 //route for one specific note
