@@ -1,0 +1,1 @@
+- missing script seed.js when try to run npm run seed.js

@@ -1,20 +1,28 @@
 let express = require('express');
-let router = express.Router(); //might not need since don't have routes
 let app = express();
 let db = require('./db/index');
 let routes = require('./routes');
 let morgan = require('morgan');
-
-//TODO: still need nunjucks & bodyParser for templating/using body of requests
+let nunjucks = require('nunjucks');
+let bodyParser = require('body-parser');
 
 app.use(morgan('combined'))
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+app.engine('html', nunjucks.render);
+nunjucks.configure('views', {noCache: true});
+app.set('view engine', 'html');
+
+app.use(express.static(__dirname + '/public'));
 
 app.use('/', routes);
 
 app.listen(3000, function() {
 	console.log("server is listening on port 3000")
 	db.sync({
-		force: true
+		force: false
 	})
 	.then(function() {
 		console.log("database is synced!")
