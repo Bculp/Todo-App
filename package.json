@@ -2,21 +2,29 @@
   "name": "noteapp",
   "version": "1.0.0",
   "description": "A simple clone of a todo web app like Wunderlist.com",
-  "main": "app.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon -e html,css,js app.js",
-    "start": "npm run start:dev"
+    "start": "webpack -w & nodemon --watch server -e js,html server.js",
+    "seed": "node ./bin/seed"
   },
   "author": "Brandon C",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-register": "^6.16.3",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "nunjucks": "^2.5.2",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^3.24.5"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "sequelize": "^3.24.5",
+    "webpack": "^1.13.2"
   }
 }

@@ -1,3 +1,9 @@
 - missing script seed.js when try to run npm run seed.js
 
 - body is currently being blocked by nabber even though i added padding to the top of it
+
+--i need a main.js and start.js for babel/es6 etc. but what goes in there is a hodgepodge of info to start the app
+ is there a better way of doing this? do i need all of this??
+
+ -no .babelrc file in solution for juke but get error can't find module babel/register when do npm start and online
+   people say you need a babelrc file
