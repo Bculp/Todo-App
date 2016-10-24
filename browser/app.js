@@ -4,5 +4,8 @@ import ReactDOM from 'react-dom';
 
 
 ReactDOM.render(
-	<Component />, document.getElementById('app')
+	// <Component />, document.getElementById('app')
+	 
+	 	<h1>TEST REACT</h1>, document.getElementById('app')
+
 );

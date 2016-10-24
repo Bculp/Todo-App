@@ -60,7 +60,14 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_reactDom2.default.render(_react2.default.createElement(_component2.default, null), document.getElementById('app'));
+	_reactDom2.default.render(
+	// <Component />, document.getElementById('app')
+	
+	_react2.default.createElement(
+		'h1',
+		null,
+		'TEST REACT'
+	), document.getElementById('app'));
 
 /***/ },
 /* 1 */
@@ -4248,209 +4255,239 @@
 		value: true
 	});
 	
-	exports.default = function () {
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-		_react2.default.createElement(
-			"body",
-			null,
-			_react2.default.createElement(
-				"div",
-				{ "class": "main" },
-				_react2.default.createElement(
-					"nav",
-					{ "class": "navbar navbar-default navbar-fixed-top" },
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	//dumb component that just renders
+	
+	//can't get anything to render using export default function so switched to class
+	
+	var Component = function (_React$component) {
+		_inherits(Component, _React$component);
+	
+		function Component() {
+			_classCallCheck(this, Component);
+	
+			return _possibleConstructorReturn(this, (Component.__proto__ || Object.getPrototypeOf(Component)).apply(this, arguments));
+		}
+	
+		_createClass(Component, [{
+			key: "render",
+			value: function render() {
+				return _react2.default.createElement(
+					"body",
+					null,
 					_react2.default.createElement(
 						"div",
-						{ "class": "container-fluid" },
+						{ "class": "main" },
 						_react2.default.createElement(
-							"div",
-							{ "class": "navbar-header" },
+							"nav",
+							{ "class": "navbar navbar-default navbar-fixed-top" },
 							_react2.default.createElement(
-								"button",
-								{ type: "button", "class": "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#bs-example-navbar-collapse-1", "aria-expanded": "false" },
+								"div",
+								{ "class": "container-fluid" },
 								_react2.default.createElement(
-									"span",
-									{ "class": "sr-only" },
-									"Toggle navigation"
-								),
-								_react2.default.createElement("span", { "class": "icon-bar" }),
-								_react2.default.createElement("span", { "class": "icon-bar" }),
-								_react2.default.createElement("span", { "class": "icon-bar" })
-							),
-							_react2.default.createElement(
-								"a",
-								{ "class": "navbar-brand", href: "#" },
-								"TODOS"
-							)
-						),
-						_react2.default.createElement(
-							"div",
-							{ "class": "collapse navbar-collapse", id: "bs-example-navbar-collapse-1" },
-							_react2.default.createElement(
-								"ul",
-								{ "class": "nav navbar-nav" },
-								_react2.default.createElement(
-									"li",
-									{ "class": "active" },
+									"div",
+									{ "class": "navbar-header" },
 									_react2.default.createElement(
-										"a",
-										{ href: "#" },
-										"Link ",
+										"button",
+										{ type: "button", "class": "navbar-toggle collapsed", "data-toggle": "collapse", "data-target": "#bs-example-navbar-collapse-1", "aria-expanded": "false" },
 										_react2.default.createElement(
 											"span",
 											{ "class": "sr-only" },
-											"(current)"
-										)
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									null,
-									_react2.default.createElement(
-										"a",
-										{ href: "#" },
-										"Link"
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									{ "class": "dropdown" },
-									_react2.default.createElement(
-										"a",
-										{ href: "#", "class": "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
-										"Dropdown ",
-										_react2.default.createElement("span", { "class": "caret" })
+											"Toggle navigation"
+										),
+										_react2.default.createElement("span", { "class": "icon-bar" }),
+										_react2.default.createElement("span", { "class": "icon-bar" }),
+										_react2.default.createElement("span", { "class": "icon-bar" })
 									),
 									_react2.default.createElement(
-										"ul",
-										{ "class": "dropdown-menu" },
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"Action"
-											)
-										),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"Another action"
-											)
-										),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"Something else here"
-											)
-										),
-										_react2.default.createElement("li", { role: "separator", "class": "divider" }),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"Separated link"
-											)
-										),
-										_react2.default.createElement("li", { role: "separator", "class": "divider" }),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"One more separated link"
-											)
-										)
+										"a",
+										{ "class": "navbar-brand", href: "#" },
+										"TODOS"
 									)
-								)
-							),
-							_react2.default.createElement(
-								"form",
-								{ "class": "navbar-form navbar-left" },
+								),
 								_react2.default.createElement(
 									"div",
-									{ "class": "form-group" },
+									{ "class": "collapse navbar-collapse", id: "bs-example-navbar-collapse-1" },
 									_react2.default.createElement(
-										"input",
-										{ type: "text", "class": "form-control", placeholder: "Search" },
-										" "
-									)
-								),
-								_react2.default.createElement(
-									"button",
-									{ type: "submit", "class": "btn btn-default" },
-									"Submit"
-								)
-							),
-							_react2.default.createElement(
-								"ul",
-								{ "class": "nav navbar-nav navbar-right" },
-								_react2.default.createElement(
-									"li",
-									null,
+										"ul",
+										{ "class": "nav navbar-nav" },
+										_react2.default.createElement(
+											"li",
+											{ "class": "active" },
+											_react2.default.createElement(
+												"a",
+												{ href: "#" },
+												"Link ",
+												_react2.default.createElement(
+													"span",
+													{ "class": "sr-only" },
+													"(current)"
+												)
+											)
+										),
+										_react2.default.createElement(
+											"li",
+											null,
+											_react2.default.createElement(
+												"a",
+												{ href: "#" },
+												"Link"
+											)
+										),
+										_react2.default.createElement(
+											"li",
+											{ "class": "dropdown" },
+											_react2.default.createElement(
+												"a",
+												{ href: "#", "class": "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
+												"Dropdown ",
+												_react2.default.createElement("span", { "class": "caret" })
+											),
+											_react2.default.createElement(
+												"ul",
+												{ "class": "dropdown-menu" },
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Action"
+													)
+												),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Another action"
+													)
+												),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Something else here"
+													)
+												),
+												_react2.default.createElement("li", { role: "separator", "class": "divider" }),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Separated link"
+													)
+												),
+												_react2.default.createElement("li", { role: "separator", "class": "divider" }),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"One more separated link"
+													)
+												)
+											)
+										)
+									),
 									_react2.default.createElement(
-										"a",
-										{ href: "#" },
-										"Link"
-									)
-								),
-								_react2.default.createElement(
-									"li",
-									{ "class": "dropdown" },
-									_react2.default.createElement(
-										"a",
-										{ href: "#", "class": "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
-										"Dropdown ",
-										_react2.default.createElement("span", { "class": "caret" })
+										"form",
+										{ "class": "navbar-form navbar-left" },
+										_react2.default.createElement(
+											"div",
+											{ "class": "form-group" },
+											_react2.default.createElement(
+												"input",
+												{ type: "text", "class": "form-control", placeholder: "Search" },
+												" "
+											)
+										),
+										_react2.default.createElement(
+											"button",
+											{ type: "submit", "class": "btn btn-default" },
+											"Submit"
+										)
 									),
 									_react2.default.createElement(
 										"ul",
-										{ "class": "dropdown-menu" },
+										{ "class": "nav navbar-nav navbar-right" },
 										_react2.default.createElement(
 											"li",
 											null,
 											_react2.default.createElement(
 												"a",
 												{ href: "#" },
-												"Action"
+												"Link"
 											)
 										),
 										_react2.default.createElement(
 											"li",
-											null,
+											{ "class": "dropdown" },
 											_react2.default.createElement(
 												"a",
-												{ href: "#" },
-												"Another action"
-											)
-										),
-										_react2.default.createElement(
-											"li",
-											null,
+												{ href: "#", "class": "dropdown-toggle", "data-toggle": "dropdown", role: "button", "aria-haspopup": "true", "aria-expanded": "false" },
+												"Dropdown ",
+												_react2.default.createElement("span", { "class": "caret" })
+											),
 											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"Something else here"
-											)
-										),
-										_react2.default.createElement("li", { role: "separator", "class": "divider" }),
-										_react2.default.createElement(
-											"li",
-											null,
-											_react2.default.createElement(
-												"a",
-												{ href: "#" },
-												"Separated link"
+												"ul",
+												{ "class": "dropdown-menu" },
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Action"
+													)
+												),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Another action"
+													)
+												),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Something else here"
+													)
+												),
+												_react2.default.createElement("li", { role: "separator", "class": "divider" }),
+												_react2.default.createElement(
+													"li",
+													null,
+													_react2.default.createElement(
+														"a",
+														{ href: "#" },
+														"Separated link"
+													)
+												)
 											)
 										)
 									)
@@ -4458,16 +4495,14 @@
 							)
 						)
 					)
-				)
-			)
-		);
-	};
+				);
+			}
+		}]);
 	
-	var _react = __webpack_require__(1);
+		return Component;
+	}(_react2.default.component);
 	
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	exports.default = Component;
 
 /***/ },
 /* 35 */

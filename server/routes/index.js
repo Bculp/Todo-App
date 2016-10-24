@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 	// .catch(next)
 
 	//**Renders just the html file, nothing else **//
-	res.render('index');
+	res.send('inside the get all api route');
 })
 
 //route for one specific note
